@@ -58,7 +58,7 @@ let tomcat2 = buildName2('Tom', 'Cat');
 let tom2 = buildName2('Tom');
 
 // 剩余参数只能是最后一个参数
-function push(array: any[], ...items) { // items 隐含 any[] 类型，编辑器警告而已
+function push(array: any[], ...items: any[]) { // items 隐含 any[] 类型，编辑器警告而已
     items.forEach(function(item) {
         array.push(item);
     });
