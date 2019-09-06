@@ -25,3 +25,27 @@ p1.study();
 var p2 = new Programmer();
 p2.name = "韩梅梅";
 p2.study();
+
+function sum() {
+    // let args: number[] = arguments; // 类数组不是数组类型
+    const args: IArguments = arguments;
+}
+
+// IArguments实际上是下面的类型
+function sum2() {
+    let args: {
+        [index: number]: number;
+        length: number;
+        callee: Function;
+    } = arguments;
+}
+// 可选参数
+function buildName(firstName: string, lastName?: string) {
+    if (lastName) {
+        return firstName + ' ' + lastName;
+    } else {
+        return firstName;
+    }
+}
+let tomcat = buildName('Tom', 'Cat');
+let tom = buildName('Tom');
