@@ -1,4 +1,3 @@
-// 内层的这个配置文件，不起作用，要放在项目的额跟目录
 {
   "compilerOptions": {
       "module": "commonjs",

@@ -5,6 +5,15 @@ export class Programmer2 {
  
     study() {
         console.log(this.name + "学习");
+        const fruits = new Set(['apple', 'pear', 'mango']);
+        // fruits['peach'] = 'Princess Peach.';
+        for (const fruit in fruits) {
+            console.log(fruit);
+        }
+
+        for (const fruit of fruits) {
+            console.log(fruit);
+        }
     }
 }
  
